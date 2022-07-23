@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 bears <- read.csv(file="BEARS.csv",header = TRUE)
 ```
 
+
 ## Model LENGTH ~ NECK  this is an example  
 
 ```{r}
@@ -32,5 +33,24 @@ new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
 predict(simp,new,se.fit=TRUE)
 ```
+
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The plot that relates the variables LENGTH and NECK has a higher adjusted r-squared value (.7423) as compared to the relationship between LENGTH and WEIGHT variables. Additionally, the former yields a smaller residual strand error value(5.367), while the latter carried 5.432 degrees of freedom. When considering this data, the variable NECK seems to be more accurate predictor of LENGTH and WEIGHT. 
+
+
+
+
+
+
+
+
+
 
