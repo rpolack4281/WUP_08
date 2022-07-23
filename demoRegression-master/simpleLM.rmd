@@ -54,6 +54,20 @@ summary.lm(simp)
 
 The relative residual error and adjusted r-square values are too high and low, respectively, as compared to the aforementioned variables, indicating the relationship between AGE and LENGTH is weak.   
 
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The scatter-plot detailing the relationship between LENGTH and HEADWTH, when computed, a higher residual standard error and lesser adjusted r-squared compared to the scatter-plot between LENGTH and NECK. 
+
+
+
+
+
+
 
 
 
