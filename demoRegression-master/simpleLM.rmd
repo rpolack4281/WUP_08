@@ -45,6 +45,14 @@ summary.lm(simp)
 
 The plot that relates the variables LENGTH and NECK has a higher adjusted r-squared value (.7423) as compared to the relationship between LENGTH and WEIGHT variables. Additionally, the former yields a smaller residual strand error value(5.367), while the latter carried 5.432 degrees of freedom. When considering this data, the variable NECK seems to be more accurate predictor of LENGTH and WEIGHT. 
 
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The relative residual error and adjusted r-square values are too high and low, respectively, as compared to the aforementioned variables, indicating the relationship between AGE and LENGTH is weak.   
 
 
 
